@@ -6,7 +6,6 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class PM25 {
     private String name;
-    //private LatLng latlng ;
     private double latitude;
     private double longitude;
     private double pm25_one_hourly;
@@ -35,22 +34,11 @@ public class PM25 {
         return pm25_one_hourly;
     }
 
-   /* public void setName(String name){
-        this.name = name;
-    }
 
-    public void setLongitude(double longitude){
-        this.longitude = longitude;
-    }
-
-    public void setLatitude (double latitude){
-        this.latitude = latitude;
-    }*/
-
-    public float distance (PM25 other){
+    public float distance (double latitude,double longitude){
         float[] results = new float[1];
         Location.distanceBetween(this.latitude, this.longitude,
-                other.latitude, other.longitude,
+                latitude, longitude,
                 results);
         return results[0];
     }
@@ -92,15 +80,6 @@ public class PM25 {
         return "impossible";
     }
 
-
-
-    //public static void main(String[] arg){
-
-//PM25 a = new PM25("a",1,1,1);
-
-//System.out.println(a.getName());
-
-//}
 
 }
 

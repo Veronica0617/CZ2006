@@ -24,8 +24,13 @@ import java.util.ArrayList;
 
 public class GetPM25 extends AsyncTask<Void, Void, Void> {
     private ArrayList<PM25> list = new ArrayList<PM25>();
-    @Override
 
+    /*protected ArrayList<PM25> getlist(){
+        //doInBackground();
+        return list;
+    }*/
+
+    @Override
     protected Void doInBackground(Void... voids) {
         HttpHandler sh = new HttpHandler();
         String url = "https://api.data.gov.sg/v1/environment/pm25";
@@ -108,17 +113,19 @@ public class GetPM25 extends AsyncTask<Void, Void, Void> {
             }
         }
             //debug
-           for(int k = 0 ; k < list.size() ; k++){
+          /* for(int k = 0 ; k < list.size() ; k++){
                list.get(k).print();
 
                System.out.println("CAUTION: " + list.get(k).precaution());
-            }
+            }*/
         return null;
     }
     @Override
 
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
+        MainActivity.trial.setText(list.get(0).getName());
+
     }
 
 }
