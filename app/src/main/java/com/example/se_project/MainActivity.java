@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //hi
         trial = (TextView)findViewById(R.id.trial);
-        new GetPM25().execute();
+           new GetPM25().execute();
     }
+
 }
