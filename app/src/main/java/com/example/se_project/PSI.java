@@ -28,7 +28,7 @@ public class PSI {
         return longitude;
     }
 
-    public double getPm25_one_hourly(){
+    public double getPsi_twenty_four_hourly_one_hourly(){
         return psi_twenty_four_hourly;
     }
 
@@ -40,6 +40,7 @@ public class PSI {
                 results);
         return results[0];
     }
+
 
     //debug
     public void print(){
