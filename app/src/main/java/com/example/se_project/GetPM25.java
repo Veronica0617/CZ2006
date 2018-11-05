@@ -102,7 +102,7 @@ public class GetPM25 extends AsyncTask<Void, Void, Void> {
                     //System.out.println("HHHHHHHHHH: " + list.size());
 
                     //debug
-                  /*  for(int k = 0 ; k < list.size() ; i++){
+                    /*for(int k = 0 ; k < list.size() ; i++){
                         list.get(k).print();
                     }*/
 
@@ -113,7 +113,7 @@ public class GetPM25 extends AsyncTask<Void, Void, Void> {
             }
         }
             //debug
-          /* for(int k = 0 ; k < list.size() ; k++){
+           /*for(int k = 0 ; k < list.size() ; k++){
                list.get(k).print();
 
                System.out.println("CAUTION: " + list.get(k).precaution());
@@ -124,7 +124,7 @@ public class GetPM25 extends AsyncTask<Void, Void, Void> {
 
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        MainActivity.trial.setText(list.get(0).getName());
+        MainActivity.trial.setText(list.get(1).getName());
 
     }
 
