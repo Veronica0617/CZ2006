@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener 
 
     public void onTaskCompleted(ArrayList<PM25> result, TaskType taskType){
         if (taskType == TaskType.GetPM25){
+            //debug
             trial.setText(result.get(1).getName());
         }
     }
