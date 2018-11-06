@@ -32,7 +32,13 @@ public class PSI {
         return psi_twenty_four_hourly;
     }
 
+    public String safety_levels(){
+        if (psi_twenty_four_hourly<=50 ) return "Good";
+        if (51<=psi_twenty_four_hourly && psi_twenty_four_hourly<=100) return "Moderate";
+        if (101<=psi_twenty_four_hourly && psi_twenty_four_hourly<=200) return "Unhealthy";
 
+        return "impossible";
+    }
     public float distance (double latitude,double longitude){
         float[] results = new float[1];
         Location.distanceBetween(this.latitude, this.longitude,

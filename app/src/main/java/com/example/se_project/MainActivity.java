@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AsynTaskListener {
     public static TextView trial;
+    ArrayList<PM25> pm25_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener 
         if (taskType == TaskType.GetPM25){
             //debug
             trial.setText(result.get(1).getName());
+            pm25_list = result;
         }
     }
 
