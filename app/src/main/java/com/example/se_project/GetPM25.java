@@ -1,5 +1,6 @@
 package com.example.se_project;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -22,16 +23,21 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class GetPM25 extends AsyncTask<Void, Void, Void> {
-    private ArrayList<PM25> list = new ArrayList<PM25>();
-
+public class GetPM25 extends AsyncTask<Void,Void,ArrayList<PM25>> {
+    ArrayList<PM25> list = new ArrayList<PM25>();
+    AsynTaskListener taskListener;
+    TaskType taskType;
     /*protected ArrayList<PM25> getlist(){
         //doInBackground();
         return list;
     }*/
+    public GetPM25( AsynTaskListener taskListener, TaskType taskType){
+        this.taskListener = taskListener;
+        this.taskType = taskType;
+    }
 
     @Override
-    protected Void doInBackground(Void... voids) {
+    protected ArrayList<PM25> doInBackground(Void...voids) {
         HttpHandler sh = new HttpHandler();
         String url = "https://api.data.gov.sg/v1/environment/pm25";
         String jsonStr = sh.makeServiceCall(url);
@@ -118,13 +124,14 @@ public class GetPM25 extends AsyncTask<Void, Void, Void> {
 
                System.out.println("CAUTION: " + list.get(k).precaution());
             }*/
-        return null;
+        return list;
     }
     @Override
 
-    protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
-        MainActivity.trial.setText(list.get(1).getName());
+    protected void onPostExecute(ArrayList<PM25> result) {
+        super.onPostExecute(result);
+        taskListener.onTaskCompleted(result, taskType);
+        //MainActivity.trial.setText(list.get(1).getName());
 
     }
 
