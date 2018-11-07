@@ -6,6 +6,11 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AsynTaskListener,AsyncTaskListenerPSI,AsyncTaskListenerUVI{
@@ -13,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
     public static TextView trial2;
     ArrayList<PM25> pm25_list;
     ArrayList<PSI> psi_list;
+    ArrayList<LicensedPharmacy> licensedPharmacies = new ArrayList<LicensedPharmacy>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +27,11 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
         //hi
         trial = (TextView)findViewById(R.id.trial);
         trial2 = (TextView)findViewById(R.id.trial2);
-           //new GetPM25().execute();
-            //GetPM25 pm25 = new GetPM25();
-            //new GetPM25().execute();
-            //trial.setText(pm25.list.get(1).getName());
+
             new GetPM25(MainActivity.this,TaskType.GetPM25).execute();
             new GetPSI(MainActivity.this,TaskType.GetPSI).execute();
             new GetUVI(MainActivity.this,TaskType.GetUVI).execute();
+            readLicensedPharmacy();
 
     }
 
@@ -50,7 +54,32 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
     public void onTaskCompletedUVI(UVI result, TaskType taskType){
         if (taskType == TaskType.GetUVI){
             //debug
-            trial2.setText(Double.toString(result.getUvi_index()));
+            //trial2.setText(Double.toString(result.getUvi_index()));
+        }
+    }
+
+    /*trial for getting CSV file (LicensedPharmacy)*/
+    private void readLicensedPharmacy(){
+        InputStream is = getResources().openRawResource(R.raw.listingoflicensedpharmacies);
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
+
+        String line="";
+        try {
+            //Step over headers
+            reader.readLine();
+            while ((line = reader.readLine()) != null) {
+                //Split by ','
+                String[] tokens = line.split(",(?=([^\"]|\"[^\"]*\")*$)");
+
+                //Read the data
+                LicensedPharmacy licensedPharmacy = new LicensedPharmacy(tokens[0],tokens[1],tokens[2]);
+                trial2.setText(licensedPharmacy.getPharmacy_address());
+                licensedPharmacies.add(licensedPharmacy);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
         }
     }
 
