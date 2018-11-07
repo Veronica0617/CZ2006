@@ -8,7 +8,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements AsynTaskListener,AsyncTaskListenerPSI{
+public class MainActivity extends AppCompatActivity implements AsynTaskListener,AsyncTaskListenerPSI,AsyncTaskListenerUVI{
     public static TextView trial;
     public static TextView trial2;
     ArrayList<PM25> pm25_list;
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
             //trial.setText(pm25.list.get(1).getName());
             new GetPM25(MainActivity.this,TaskType.GetPM25).execute();
             new GetPSI(MainActivity.this,TaskType.GetPSI).execute();
+            new GetUVI(MainActivity.this,TaskType.GetUVI).execute();
 
     }
 
@@ -41,9 +42,17 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
     public void onTaskCompletedPSI(ArrayList<PSI> result, TaskType taskType){
         if (taskType == TaskType.GetPSI){
             //debug
-            trial2.setText(result.get(1).getName());
+            //trial2.setText(Double.toString(result.get(1).getPsi_twenty_four_hourly_one_hourly()));
             psi_list = result;
         }
     }
+
+    public void onTaskCompletedUVI(UVI result, TaskType taskType){
+        if (taskType == TaskType.GetUVI){
+            //debug
+            trial2.setText(Double.toString(result.getUvi_index()));
+        }
+    }
+
 
 }
