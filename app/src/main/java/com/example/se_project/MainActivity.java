@@ -1,8 +1,11 @@
 package com.example.se_project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -83,5 +86,22 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
         }
     }
 
-
+    /**
+     * @author Veronica
+     * The button, we can see the search interface alfter click it.
+     */
+    public void onClick(View view)
+    {
+        try
+        {
+            //startActivity(new Intent("com.AndroidTest.SecondActivity"));//隐式intent
+            Intent intent = new Intent(this, List_activity.class);//显示intent
+            startActivity(intent);
+        }
+        catch (Exception ex)
+        {
+            // 显示异常信息
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
 }
