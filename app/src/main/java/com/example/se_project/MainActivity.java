@@ -104,4 +104,8 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
             Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
+    public String getList(int i) {
+        return pm25_list.get(i).getName();
+    }
 }
