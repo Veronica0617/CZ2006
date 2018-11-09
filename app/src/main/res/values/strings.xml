@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">SE_project</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_healthy_diet">Healthy Diet</string>
+    <string name="nav_exercise">Exercise</string>
+    <string name="nav_notification">Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_pm25">PM2.4</string>
+    <string name="nav_psi">PSI</string>
+    <string name="nav_gym">Gym</string>
+    <string name="nav_healthier_cateriers">Healthier Cateriers</string>
+    <string name="nav_pm25_1">PM2.5</string>
+    <string name="title_activity_google_maps">Map</string>
 </resources>

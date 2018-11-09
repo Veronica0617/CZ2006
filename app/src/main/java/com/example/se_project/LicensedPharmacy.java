@@ -13,12 +13,8 @@ public class LicensedPharmacy {
         this.pharmacy_name = pharmacy_name;
         this.pharmacist_in_charge = pharmacist_in_charge;
         this.pharmacy_address = pharmacy_address;
-        address = null;
     }
 
-    void setAddress(){
-        String [] addressArray = pharmacy_address.trim().split(",");
-    }
     public String getPharmacy_name(){
         return pharmacy_name;
     }
