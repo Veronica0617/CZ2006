@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="search" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/search_pharmacies"
+        android:layout_width="401dp"
+        android:layout_height="226dp"
+        android:src="@android:color/holo_blue_bright" />
+
+    <ImageButton
+        android:id="@+id/search_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="294dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:src="@android:color/holo_blue_dark" />
+</RelativeLayout>
