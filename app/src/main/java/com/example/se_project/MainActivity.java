@@ -150,5 +150,4 @@ public class MainActivity extends AppCompatActivity implements AsynTaskListener,
         fragmentTransaction.replace(R.id.main_frame,fragment);
         fragmentTransaction.commit();
     }
-    //jjjjjjjjkkkkkkk
 }
