@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.SET_ALARM"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,7 +32,21 @@
 
         <activity
             android:name=".GoogleMapsActivity"
-            android:label="@string/title_activity_google_maps"></activity>
+            android:label="@string/title_activity_google_maps" />
+
+        <activity android:name=".Repeating_activity_pm25">
+            <!--<intent-filter>
+                <action android:name=".Repeating_activity_pm25" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".Repeating_activity_psi"></activity>
+        <activity android:name=".Repeating_activity_uvi"></activity>
+        <receiver android:name=".Notification_reciever_uvi"></receiver>
+        <receiver android:name=".Notification_reciever_psi"></receiver>
+        <receiver android:name=".Notification_reciever_pm25"/>
+
     </application>
 
 </manifest>
