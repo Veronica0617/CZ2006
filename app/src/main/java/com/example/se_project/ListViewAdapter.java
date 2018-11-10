@@ -92,8 +92,8 @@ public class ListViewAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext,PharmacyItem.class);
-                intent.putExtra("Name",modelList.get(position).getTitle());
+                Intent intent = new Intent(mContext,OnePharmacy.class);
+               intent.putExtra("Name",modelList.get(position).getTitle());
                 intent.putExtra("Info",modelList.get(position).getInfo1());
                 intent.putExtra("Address",modelList.get(position).getInfo2());
                 mContext.startActivity(intent);
