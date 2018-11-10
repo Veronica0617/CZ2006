@@ -6,8 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SET_ALARM" />
-
+    <uses-permission android:name="android.permission.SET_ALARM"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,31 +33,20 @@
         <activity
             android:name=".GoogleMapsActivity"
             android:label="@string/title_activity_google_maps" />
-        <activity android:name=".Repeating_activity_pm25">
 
-            <!--
-            <intent-filter>
+        <activity android:name=".Repeating_activity_pm25">
+            <!--<intent-filter>
                 <action android:name=".Repeating_activity_pm25" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            -->
+            </intent-filter>-->
         </activity>
-        <activity android:name=".Repeating_activity_psi" />
-        <activity android:name=".Repeating_activity_uvi" />
+        <activity android:name=".Repeating_activity_psi"></activity>
+        <activity android:name=".Repeating_activity_uvi"></activity>
+        <receiver android:name=".Notification_reciever_uvi"></receiver>
+        <receiver android:name=".Notification_reciever_psi"></receiver>
+        <receiver android:name=".Notification_reciever_pm25"/>
 
-        <receiver android:name=".Notification_reciever_uvi" />
-        <receiver android:name=".Notification_reciever_psi" />
-        <receiver android:name=".Notification_reciever_pm25" />
-
-        <activity
-            android:name=".OnePharmacy"
-            android:label="@string/title_activity_one_pharmacy"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".OneMedicine"
-            android:label="@string/title_activity_one_medicine"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
