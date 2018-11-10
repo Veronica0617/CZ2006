@@ -41,7 +41,7 @@ public class NotificationFragment extends Fragment {
         //state_psi = preferences.getBoolean("alertpsi",false);
         //state_uvi = preferences.getBoolean("alertuvi",false);
         alertpm25 = (SwitchCompat)RootView.findViewById(R.id.alertPM25);
-        alertpm25.setChecked(false);
+        //alertpm25.setChecked(false);
         alertpm25.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
