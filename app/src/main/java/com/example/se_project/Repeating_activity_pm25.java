@@ -20,9 +20,9 @@ public class Repeating_activity_pm25 extends AppCompatActivity implements AsynTa
         Log.e("Repeating:","On");
 
         index=(TextView)findViewById(R.id.pm25_index);
-        precaution=(TextView)findViewById(R.id.precaution);
-        safety_level=(TextView)findViewById(R.id.safety_levels);
-        health_risk=(TextView)findViewById(R.id.health_effect);
+        precaution=(TextView)findViewById(R.id.pm25_precaution);
+        safety_level=(TextView)findViewById(R.id.pm25_safety_levels);
+        health_risk=(TextView)findViewById(R.id.pm25_health_effect);
 
         new GetPM25(Repeating_activity_pm25.this,TaskType.GetPM25).execute();
     }
@@ -30,7 +30,7 @@ public class Repeating_activity_pm25 extends AppCompatActivity implements AsynTa
     public void onTaskCompleted(ArrayList<PM25> result, TaskType taskType){
         if (taskType == TaskType.GetPM25){
             double latitude = 1.344456;
-            double longitude = 103.948162;
+            double longitude = 103.680971;
             int i = 0;
             /*Get the nearest PM2.5 from the user location*/
             double min = result.get(0).distance(latitude,longitude);
@@ -41,11 +41,14 @@ public class Repeating_activity_pm25 extends AppCompatActivity implements AsynTa
                 }
             }
             String dex = "Current PM2.5 index is " + Double.toString(result.get(i).getPm25_one_hourly());
-            if(index != null) index.setText(dex);
-            precaution.setText(result.get(i).precaution());
-            safety_level.setText(result.get(i).safety_levels());
+            index.setText(dex);
+            Log.e("HI",result.get(i).precaution());
+            String o = "Precaution: " + result.get(i).precaution();
+            precaution.setText(o);
+            String k = "Safety level: " + result.get(i).safety_levels();
+            safety_level.setText(k);
+            String p = "Health risk :" + result.get(i).health_effects();
             health_risk.setText(result.get(i).health_effects());
-
 
         }
     }

@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment implements AsynTaskListener,AsyncTask
     public void onTaskCompleted(ArrayList<PM25> result, TaskType taskType){
         if (taskType == TaskType.GetPM25){
             double latitude = 1.344456;
-            double longitude = 103.948162;
+            double longitude = 103.680971;
             int i = 0;
             /*Get the nearest PM2.5 from the user location*/
             double min = result.get(0).distance(latitude,longitude);
@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment implements AsynTaskListener,AsyncTask
     public void onTaskCompletedPSI(ArrayList<PSI> result, TaskType taskType){
         if (taskType == TaskType.GetPSI){
             double latitude = 1.344456;
-            double longitude = 103.948162;
+            double longitude = 103.680971;
             int i = 0;
             /*Get the nearest PM2.5 from the user location*/
             double min = result.get(0).distance(latitude,longitude);

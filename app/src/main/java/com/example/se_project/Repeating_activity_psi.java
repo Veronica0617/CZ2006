@@ -28,7 +28,7 @@ public class Repeating_activity_psi extends AppCompatActivity implements AsyncTa
     public void onTaskCompletedPSI(ArrayList<PSI> result, TaskType taskType){
         if (taskType == TaskType.GetPSI){
             double latitude = 1.344456;
-            double longitude = 103.948162;
+            double longitude = 103.680971;
             int i = 0;
 
             double min = result.get(0).distance(latitude,longitude);
