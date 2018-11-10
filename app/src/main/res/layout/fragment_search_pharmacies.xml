@@ -6,9 +6,26 @@
     tools:context=".SearchPharmaciesFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="pharmacy" />
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.SearchView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
 
 </FrameLayout>
