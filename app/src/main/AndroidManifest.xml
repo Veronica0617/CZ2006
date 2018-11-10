@@ -49,6 +49,12 @@
         <receiver android:name=".Notification_reciever_psi"></receiver>
         <receiver android:name=".Notification_reciever_pm25"/>
 
+        <activity
+            android:name=".OnePharmacy"
+            android:label="@string/title_activity_one_pharmacy"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
     </application>
 
 </manifest>
