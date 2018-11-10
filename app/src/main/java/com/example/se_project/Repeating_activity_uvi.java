@@ -23,6 +23,7 @@ public class Repeating_activity_uvi extends AppCompatActivity implements AsyncTa
 
     public void onTaskCompletedUVI(UVI result, TaskType taskType){
         if (taskType == TaskType.GetUVI){
+            //kk
             Log.e("UVI he","kkkk");
             String text = "UV Index value averaged " + Double.toString(result.getUvi_index()) + " which is " + result.safety_levels();
             index.setText(text);
