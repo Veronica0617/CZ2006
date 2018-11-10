@@ -54,6 +54,10 @@
         <activity
             android:name=".OnePharmacy"
             android:label="@string/title_activity_one_pharmacy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OneMedicine"
+            android:label="@string/title_activity_one_medicine"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

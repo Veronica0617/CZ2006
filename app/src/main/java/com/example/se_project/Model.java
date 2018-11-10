@@ -15,7 +15,8 @@ public class Model {
     String info1;
     String info2;
     int icon;
-    double distance,latitude, longitude;
+    double distance=-1,latitude, longitude;
+    int num;
 
     public Model(String title,String info1,String info2,int icon)
     {
@@ -24,7 +25,9 @@ public class Model {
         this.info2=info2;
         this.icon=icon;
     }
-    public Model(String title,String info1,String info2,double latitude, double longitude, int icon)
+
+
+    public Model(String title, String info1, String info2, double latitude, double longitude, int icon)
     {
         this.title=title;
         this.info1=info1;
@@ -35,16 +38,21 @@ public class Model {
         distance=calculateDistance(1.3407,103.6808);
     }
 
-    public Model(String title,String info1,int icon)
+    public Model(String title,String info1,int num,int icon)
     {
         this.title=title;
         this.info1=info1;
-        this.info2=info2;
         this.icon=icon;
+        this.num=num;
     }
+
 
     //getters
 
+
+    public int getNum() {
+        return num;
+    }
 
     public String getTitle() {
         return this.title;

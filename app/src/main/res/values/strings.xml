@@ -89,4 +89,5 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_one_pharmacy">OnePharmacy</string>
+    <string name="title_activity_one_medicine">OneMedicine</string>
 </resources>

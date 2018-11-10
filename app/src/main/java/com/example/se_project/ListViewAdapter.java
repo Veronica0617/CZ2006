@@ -68,35 +68,54 @@ public class ListViewAdapter extends BaseAdapter {
         else{
             holder=(ViewHolder)view.getTag();
         }
-        Model nearest=arrayList.get(0);
-        double min=arrayList.get(0).getDistance();
-        for(int i =0;i<arrayList.size();i++)
+        if(modelList.get(position).getDistance()!=-1)
         {
-            if(arrayList.get(i).getDistance()<min)
+            Model nearest=arrayList.get(0);
+            double min=arrayList.get(0).getDistance();
+            for(int i =0;i<arrayList.size();i++)
             {
-                min=arrayList.get(i).getDistance();
-                nearest=arrayList.get(i);
+                if(arrayList.get(i).getDistance()<min)
+                {
+                    min=arrayList.get(i).getDistance();
+                    nearest=arrayList.get(i);
+                }
             }
+            String dist="";
+            double distanceValue=modelList.get(position).getDistance()/1000;
+            if(modelList.get(position).getDistance()==min)
+                dist="Nearest: "+String.format("%.2f", distanceValue)+"km from here";
+            else{
+                dist="Distance: "+String.format("%.2f", distanceValue)+"km";
+            }
+            holder.desc.setText(dist);
         }
-        String dist="";
-        double distanceValue=modelList.get(position).getDistance()/1000;
-        if(modelList.get(position).getDistance()==min)
-            dist="Nearest: "+String.format("%.2f", distanceValue)+"km from here";
         else{
-            dist="Distance: "+String.format("%.2f", distanceValue)+"km";
+            holder.desc.setText(modelList.get(position).getInfo1());
         }
+
         holder.title.setText(modelList.get(position).getTitle());
-        holder.desc.setText(dist);
+
         holder.mIcon.setImageResource(modelList.get(position).getIcon());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext,OnePharmacy.class);
-               intent.putExtra("Name",modelList.get(position).getTitle());
-                intent.putExtra("Info",modelList.get(position).getInfo1());
-                intent.putExtra("Address",modelList.get(position).getInfo2());
-                mContext.startActivity(intent);
+                if(modelList.get(position).getDistance()!=-1)
+                {
+                    Intent intent = new Intent(mContext,OnePharmacy.class);
+                    intent.putExtra("Name",modelList.get(position).getTitle());
+                    intent.putExtra("Info",modelList.get(position).getInfo1());
+                    intent.putExtra("Address",modelList.get(position).getInfo2());
+                    mContext.startActivity(intent);
+                }
+                else{
+                    String xx="";
+                    Intent intent = new Intent(mContext,OneMedicine.class);
+                    xx=modelList.get(position).getNum()+xx;
+                    intent.putExtra("Number",xx);
+                    mContext.startActivity(intent);
+                }
+
             }
         });
         return view;
