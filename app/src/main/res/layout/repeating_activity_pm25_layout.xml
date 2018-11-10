@@ -29,7 +29,7 @@
             android:id="@+id/warm_reminder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="This is a warm remainder from Xianganster" />
+            android:text="This is a warm remainder from Xiangangster" />
 
         <Space
             android:layout_width="match_parent"
