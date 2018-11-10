@@ -58,9 +58,16 @@ public class NotificationFragment extends Fragment {
                             1*60*1000,
                             pendingIntent);
                     Toast.makeText(getActivity(),"Alert PM2.5 has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
-                    alertpm25.setClickable(false);
+                    //alertpm25.setClickable(false);
                 }
                 else {
+                    Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_pm25.class);
+                    intent.setAction("MY_NOTIFICATION_MESSAGE");
+                    PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
+                    );
+                    AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
+                    alarmManager.cancel(pendingIntent);
+                    Toast.makeText(getActivity(),"Alert PM2.5 has been disabled",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -82,9 +89,17 @@ public class NotificationFragment extends Fragment {
                             1*60*1000,
                             pendingIntent);
                     Toast.makeText(getActivity(),"Alert PSI has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
-                    alertpsi.setClickable(false);
+                    //alertpsi.setClickable(false);
                 }
                 else {
+                    Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_psi.class);
+                    intent.setAction("MY_NOTIFICATION_MESSAGE");
+                    PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
+                    );
+                    AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
+                    alarmManager.cancel(pendingIntent);
+                    Toast.makeText(getActivity(),"Alert PSI has been disabled",Toast.LENGTH_LONG).show();
+
                 }
             }
         });
@@ -105,21 +120,21 @@ public class NotificationFragment extends Fragment {
                             1*60*1000,
                             pendingIntent);
                     Toast.makeText(getActivity(),"Alert UVI has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
-                    alertuvi.setClickable(false);
                 }
                 else {
+                    //AlarmManager.cancel(0);
+                    Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_uvi.class);
+                    intent.setAction("MY_NOTIFICATION_MESSAGE");
+                    PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
+                    );
+                    AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
+                    alarmManager.cancel(pendingIntent);
+                    Toast.makeText(getActivity(),"Alert UVI has been disabled",Toast.LENGTH_LONG).show();
+
                 }
             }
         });
-        //alertpm25.setChecked(state_pm25);
-        //alertpm25.setChecked(state_psi);
-        //alertpm25.setChecked(state_uvi);
-        /*alertpm25.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(),"HHH",Toast.LENGTH_LONG);
-            }
-        });*/
+
         return RootView;
     }
 
