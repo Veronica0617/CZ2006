@@ -43,6 +43,8 @@
         </activity>
         <activity android:name=".Repeating_activity_psi"></activity>
         <activity android:name=".Repeating_activity_uvi"></activity>
+        <activity android:name=".Activity_exercise"/>
+        <receiver android:name=".Notification_reciever_exercise"></receiver>
         <receiver android:name=".Notification_reciever_uvi"></receiver>
         <receiver android:name=".Notification_reciever_psi"></receiver>
         <receiver android:name=".Notification_reciever_pm25"/>
