@@ -26,7 +26,7 @@ public class Notification_reciever_exercise extends BroadcastReceiver {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "default3")
                 .setSmallIcon(R.mipmap.ic_launcher) // notification icon
                 .setContentTitle("Time for exercise") // title for notification
-                .setContentText("You have scheduled " + message + " now.")// message for notification
+                .setContentText("Let's go " + message + " now.")// message for notification
                 // set alarm sound for notification
                 .setAutoCancel(true); // clear notification after click
         Intent intent2 = new Intent(context, Activity_exercise.class);

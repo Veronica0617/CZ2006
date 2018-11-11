@@ -52,13 +52,11 @@ public class NotificationFragment extends Fragment {
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
                     );
                     AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
-                    //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_FIFTEEN_MINUTES,pendingIntent);
-                    alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                            SystemClock.elapsedRealtime(),
-                            1*60*1000,
-                            pendingIntent);
+                    alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                            SystemClock.elapsedRealtime() + 1*60*1000,
+                            1*60*1000, pendingIntent);
+
                     Toast.makeText(getActivity(),"Alert PM2.5 has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
-                    //alertpm25.setClickable(false);
                 }
                 else {
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_pm25.class);
@@ -83,13 +81,11 @@ public class NotificationFragment extends Fragment {
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
                     );
                     AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
-                    //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_FIFTEEN_MINUTES,pendingIntent);
-                    alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                            SystemClock.elapsedRealtime(),
-                            1*60*1000,
-                            pendingIntent);
+                    alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                            SystemClock.elapsedRealtime() + 1*60*1000,
+                            1*60*1000, pendingIntent);
+
                     Toast.makeText(getActivity(),"Alert PSI has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
-                    //alertpsi.setClickable(false);
                 }
                 else {
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_psi.class);
@@ -114,15 +110,14 @@ public class NotificationFragment extends Fragment {
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
                     );
                     AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
-                    //alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_FIFTEEN_MINUTES,pendingIntent);
-                    alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                            SystemClock.elapsedRealtime(),
-                            1*60*1000,
-                            pendingIntent);
+
+                    alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                            SystemClock.elapsedRealtime() + 1*60*1000,
+                            1*60*1000, pendingIntent);
+
                     Toast.makeText(getActivity(),"Alert UVI has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
                 }
                 else {
-                    //AlarmManager.cancel(0);
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_uvi.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
