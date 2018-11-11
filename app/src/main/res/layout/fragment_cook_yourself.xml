@@ -1,14 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CookYourselfFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <!--
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Cook Yourself" />
+        android:text="Cook Yourself" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Recipe" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beverages" />
+
+            <ImageButton
+                android:id="@+id/beverageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/beverageContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cereal" />
+
+            <ImageButton
+                android:id="@+id/cerealButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/cerealContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diary Product" />
+
+            <ImageButton
+                android:id="@+id/diaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/diaryContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eggs and Egg Products" />
+
+            <ImageButton
+                android:id="@+id/eggButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/eggContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit and Vegetables" />
+
+            <ImageButton
+                android:id="@+id/fruitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/fruitContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meat and Poultry" />
+
+            <ImageButton
+                android:id="@+id/meatButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/meatContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seafood" />
+
+            <ImageButton
+                android:id="@+id/seafoodButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_rotate" />
+
+            <TextView
+                android:id="@+id/seafoodContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+
+            <!--
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="69dp">
+
+                <ImageButton
+                    android:id="@+id/no1"
+                    android:layout_width="138dp"
+                    android:layout_height="125dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/beverage" />
+
+                <ImageButton
+                    android:id="@+id/no2"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent"
+                    android:src="?attr/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/no3"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:src="?attr/colorPrimary" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageButton
+                    android:id="@+id/no4"
+                    android:layout_width="138dp"
+                    android:layout_height="125dp"
+                    android:src="?attr/actionModeSplitBackground" />
+
+                <ImageButton
+                    android:id="@+id/no5"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent"
+                    android:src="?attr/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/no6"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:src="?attr/colorPrimary" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageButton
+                    android:id="@+id/no7"
+                    android:layout_width="138dp"
+                    android:layout_height="125dp"
+                    android:src="?attr/actionModeSplitBackground" />
+
+                <ImageButton
+                    android:id="@+id/no8"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent"
+                    android:src="?attr/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/no9"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:src="?attr/colorPrimary" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>-->
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

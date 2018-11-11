@@ -90,4 +90,11 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_one_pharmacy">OnePharmacy</string>
     <string name="title_activity_one_medicine">OneMedicine</string>
+    <string name="title_activity_select_food">SelectFood</string>
+    <string name="dialog_title">Beverages</string>
+    <string name="ok_label">Ok</string>
+    <string name="dismiss_label">Dismiss</string>
+    <string name="clear_all_label">Clear all</string>
+    <string name="Dialog_title">Diary Product</string>
+    <string name="cereal_title">Cereal</string>
 </resources>
