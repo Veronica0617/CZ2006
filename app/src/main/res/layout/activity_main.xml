@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/theback">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/main_nav"
@@ -12,7 +13,10 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        app:menu="@menu/nav_items" />
+        app:menu="@menu/nav_items"
+        app:itemIconTint="@color/color"
+        app:itemTextColor="@color/color"
+        />
 
     <FrameLayout
         android:id="@+id/main_frame"

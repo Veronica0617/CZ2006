@@ -20,211 +20,369 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="66dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:text="My Recipe" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#80022132">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Beverages"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
             <TextView
+                android:textColor="#80ffffff"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Beverages" />
+                android:layout_marginBottom="5dp"
+                android:text="Click Picture to Make Your Food List" />
+                    />
 
             <ImageButton
                 android:id="@+id/beverageButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
+                android:layout_height="150dp"
+                android:background="#00ffffff"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/beverages" />
             <TextView
                 android:id="@+id/beverageContent"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/no"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cereal" />
-
-            <ImageButton
-                android:id="@+id/cerealButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
-            <TextView
-                android:id="@+id/cerealContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Diary Product" />
-
-            <ImageButton
-                android:id="@+id/diaryButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
-            <TextView
-                android:id="@+id/diaryContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Eggs and Egg Products" />
-
-            <ImageButton
-                android:id="@+id/eggButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
-            <TextView
-                android:id="@+id/eggContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fruit and Vegetables" />
-
-            <ImageButton
-                android:id="@+id/fruitButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
-            <TextView
-                android:id="@+id/fruitContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Meat and Poultry" />
-
-            <ImageButton
-                android:id="@+id/meatButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
-            <TextView
-                android:id="@+id/meatContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Seafood" />
-
-            <ImageButton
-                android:id="@+id/seafoodButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_rotate" />
-
-            <TextView
-                android:id="@+id/seafoodContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-
-            <!--
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="69dp">
-
-                <ImageButton
-                    android:id="@+id/no1"
-                    android:layout_width="138dp"
-                    android:layout_height="125dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/beverage" />
-
-                <ImageButton
-                    android:id="@+id/no2"
-                    android:layout_width="132dp"
+                android:orientation="vertical"
+                android:background="#608494af">
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="?attr/colorAccent" />
+                    android:text="Cereal"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:textColor="#80ffffff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Click Picture to Make Your Food List" />
+                />
 
                 <ImageButton
-                    android:id="@+id/no3"
-                    android:layout_width="139dp"
-                    android:layout_height="match_parent"
-                    android:src="?attr/colorPrimary" />
-            </TableRow>
-
-            <TableRow
+                    android:id="@+id/cerealButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cereal" />
+                <TextView
+                    android:id="@+id/cerealContent"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="20dp"
+                android:src="@drawable/no"/>
 
-                <ImageButton
-                    android:id="@+id/no4"
-                    android:layout_width="138dp"
-                    android:layout_height="125dp"
-                    android:src="?attr/actionModeSplitBackground" />
-
-                <ImageButton
-                    android:id="@+id/no5"
-                    android:layout_width="132dp"
-                    android:layout_height="match_parent"
-                    android:src="?attr/colorAccent" />
-
-                <ImageButton
-                    android:id="@+id/no6"
-                    android:layout_width="139dp"
-                    android:layout_height="match_parent"
-                    android:src="?attr/colorPrimary" />
-            </TableRow>
-
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <ImageButton
-                    android:id="@+id/no7"
-                    android:layout_width="138dp"
-                    android:layout_height="125dp"
-                    android:src="?attr/actionModeSplitBackground" />
-
-                <ImageButton
-                    android:id="@+id/no8"
-                    android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#80022132">
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="?attr/colorAccent" />
+                    android:text="Dairy Product"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:textColor="#80ffffff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Click Picture to Make Your Food List" />
+                />
 
                 <ImageButton
-                    android:id="@+id/no9"
-                    android:layout_width="139dp"
-                    android:layout_height="match_parent"
-                    android:src="?attr/colorPrimary" />
-            </TableRow>
-
-            <TableRow
+                    android:id="@+id/diaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dairy" />
+                <TextView
+                    android:id="@+id/diaryContent"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout>-->
+                android:layout_height="20dp"
+                android:src="@drawable/no"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#608494af">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Eggs and Egg Products"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:textColor="#80ffffff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Click Picture to Make Your Food List" />
+                />
+
+                <ImageButton
+                    android:id="@+id/eggButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/egg" />
+                <TextView
+                    android:id="@+id/eggContent"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/no"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#80022132">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Fruit and Vegetables"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:textColor="#80ffffff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Click Picture to Make Your Food List" />
+                />
+
+                <ImageButton
+                    android:id="@+id/fruitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fruit" />
+                <TextView
+                    android:id="@+id/fruitContent"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/no"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#608494af">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Meat"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:textColor="#80ffffff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Click Picture to Make Your Food List" />
+                />
+
+                <ImageButton
+                    android:id="@+id/meatButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/meat" />
+                <TextView
+                    android:id="@+id/meatContent"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/no"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#80022132">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Seafood"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:textColor="#80ffffff"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Click Picture to Make Your Food List" />
+                />
+
+                <ImageButton
+                    android:id="@+id/seafoodButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/seafood" />
+                <TextView
+                    android:id="@+id/seafoodContent"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExerciseFragment">
+    tools:context=".ExerciseFragment"
+    android:background="#35000000">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -17,16 +18,38 @@
         android:layout_marginTop="0dp"
         android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/calendar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="231dp"
-            android:src="@android:color/holo_green_dark" />
+            android:layout_height="285dp">
+            <ImageButton
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="285dp"
+                android:src="@drawable/no"
+                android:background="#00000000"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/schedule1"
+                android:layout_margin="75dp"/>
+        </RelativeLayout>
 
-        <ImageButton
-            android:id="@+id/gym_location"
-            android:layout_width="405dp"
-            android:layout_height="294dp"
-            android:src="@android:color/darker_gray" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="285dp">
+            <ImageButton
+                android:id="@+id/gym_location"
+                android:layout_width="match_parent"
+                android:layout_height="285dp"
+                android:src="@drawable/no"
+                android:background="#00000000"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/findgym"
+                android:layout_margin="75dp"/>
+        </RelativeLayout>
+
+
     </LinearLayout>
 </RelativeLayout>

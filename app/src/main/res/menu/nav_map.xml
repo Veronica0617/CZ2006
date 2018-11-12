@@ -4,18 +4,18 @@
 
     <item
         android:id="@+id/nav_pm25"
-        android:icon="@drawable/baseline_map_black_24dp"
+        android:icon="@drawable/haze"
         android:title="@string/nav_pm25_1" />
     <item
         android:id="@+id/nav_psi"
-        android:icon="@drawable/baseline_map_black_24dp"
+        android:icon="@drawable/psi"
         android:title="@string/nav_psi" />
     <item
         android:id="@+id/nav_gym"
-        android:icon="@drawable/baseline_map_black_24dp"
+        android:icon="@drawable/sports"
         android:title="@string/nav_gym" />
     <item
         android:id="@+id/nav_healthier_cateriers"
-        android:icon="@drawable/baseline_map_black_24dp"
+        android:icon="@drawable/eat"
         android:title="@string/nav_healthier_cateriers" />
 </menu>

@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment implements AsynTaskListener,AsyncTask
                     i = j;
                 }
             }
-            String text = "PM2.5 "+ result.get(i).getName() + ": " + Double.toString(result.get(i).getPm25_one_hourly());
+            String text = "PM2.5\n"+ Double.toString(result.get(i).getPm25_one_hourly())+" ("+result.get(i).getName()+") ";
             PM25.setText(text);
         }
     }
@@ -88,7 +88,7 @@ public class HomeFragment extends Fragment implements AsynTaskListener,AsyncTask
                     i = j;
                 }
             }
-            String text = "PSI " + result.get(i).getName() + ": " + Double.toString(result.get(i).getPsi_twenty_four_hourly_one_hourly());
+            String text = "PSI\n" + Double.toString(result.get(i).getPsi_twenty_four_hourly_one_hourly())+" ("+result.get(i).getName()+") ";
             PSI.setText(text);
 
         }
@@ -96,7 +96,7 @@ public class HomeFragment extends Fragment implements AsynTaskListener,AsyncTask
 
     public void onTaskCompletedUVI(UVI result, TaskType taskType){
         if (taskType == TaskType.GetUVI){
-            String text = "UV Index value averaged :" + Double.toString(result.getUvi_index());
+            String text = "UV Index\nvalue averaged: " + Double.toString(result.getUvi_index());
             UVI.setText(text);
         }
     }

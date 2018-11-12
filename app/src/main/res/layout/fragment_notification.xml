@@ -12,18 +12,49 @@
         android:id="@+id/alertPM25"
         android:layout_width="match_parent"
         android:text="Set PM2.5 Alert"
-        android:layout_height="50dp"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/colorWhite"
+        android:layout_height="70dp"
+        android:background="#95658494"/>
 
     <android.support.v7.widget.SwitchCompat
     android:id="@+id/alertPSI"
     android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
     android:text="Set PSI Alert"
-    android:layout_height="50dp"/>
+    android:layout_height="70dp"
+        android:background="#95022132"/>
 
     <android.support.v7.widget.SwitchCompat
         android:id="@+id/alertUVI"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/colorWhite"
         android:layout_width="match_parent"
         android:text="Set UVI Alert"
-        android:layout_height="50dp"/>
+        android:layout_height="70dp"
+        android:background="#95658494"/>
+
 
 </LinearLayout>

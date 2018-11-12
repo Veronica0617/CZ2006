@@ -225,7 +225,7 @@ public class CookYourselfFragment extends Fragment {
 
             }
         });
-        
+
         meat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -59,7 +59,7 @@ public class SearchPharmaciesFragment extends Fragment {
 
         /*title=new String[]{"One","Two","Three","Four","Five"};
         description=new String[]{"123","234","345","456,","567"};*/
-        icon=new int[]{R.drawable.pharmacy1,R.drawable.pharmacy2,R.drawable.pharmacy3,R.drawable.pharmacy4,R.drawable.pharmacy5};
+        icon=new int[]{R.drawable.clinic1,R.drawable.clinic2,R.drawable.clinic3,R.drawable.clinic4,R.drawable.clinic5};
         lv= (ListView) RootView.findViewById(R.id.lv);
 /*
         for(int i=0;i<title.length;i++)

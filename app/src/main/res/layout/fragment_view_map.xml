@@ -13,7 +13,9 @@
         android:id="@+id/map_nav"
         android:layout_width="match_parent"
         app:menu="@menu/nav_map"
-        android:layout_height="56dp" />
+        android:layout_height="56dp"
+        app:itemIconTint="@color/color"
+        app:itemTextColor="@color/color"/>
 
     <FrameLayout
         android:id="@+id/home_frame"

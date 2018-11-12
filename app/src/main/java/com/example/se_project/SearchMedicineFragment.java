@@ -50,8 +50,8 @@ public class SearchMedicineFragment extends Fragment {
         readMedicine();
         title=new String[]{"One","Two","Three","Four","Five"};
        description=new String[]{"123","234","345","456,","567"};
-        icon=new int[]{R.drawable.medicine1,R.drawable.medicine2,R.drawable.medicine3,R.drawable.medicine4,R.drawable.medicine5,R.drawable.medicine6,
-        R.drawable.medicine7,R.drawable.medicine8};
+        icon=new int[]{R.drawable.medi,R.drawable.medi1,R.drawable.medi2,R.drawable.medi3,R.drawable.medi4,R.drawable.medi5,
+        R.drawable.medi6,R.drawable.medi7};
         fillData();
        lv= (ListView) RootView.findViewById(R.id.lv);
        for(int i=0;i<50;i++)

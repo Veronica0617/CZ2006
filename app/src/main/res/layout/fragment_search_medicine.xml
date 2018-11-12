@@ -12,8 +12,14 @@
         android:layout_height="wrap_content">
         <android.support.v7.widget.SearchView
             android:id="@+id/sv"
+            android:textColor="@color/colorWhite"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="#408494af"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,7 +28,9 @@
             <ListView
                 android:id="@+id/lv"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></ListView>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"></ListView>
         </RelativeLayout>
 
 <!--

@@ -26,8 +26,8 @@ public class OnePharmacy extends AppCompatActivity {
 
         //actionBar.setTitle(name);
         tv.setText(name);
-        tv2.setText(info);
-        tv3.setText(address);
+        tv2.setText("Pharmacist: "+info);
+        tv3.setText("Address: "+address.substring(1,address.length()-1));
     }
 
 }

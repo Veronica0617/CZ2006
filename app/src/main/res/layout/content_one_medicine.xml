@@ -6,60 +6,137 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".OneMedicine"
-    tools:showIn="@layout/activity_one_medicine">
+    tools:showIn="@layout/activity_one_medicine"
+    android:background="@drawable/bk2"
+    android:layout_gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/no" />
         <TextView
             android:id="@+id/tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            />
         <TextView
             android:id="@+id/tv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="License_no"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Manufacturer"
+            android:textStyle="bold"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Country of Manufacturer"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:text="- - - - - - - - - - - - - - - "
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"
+            />
         <TextView
             android:id="@+id/tv5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Active Ingredients"
+            android:textStyle="bold"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Approval Date"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Act Code"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Dosage Form"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv9"
+            android:text="Forensic Classification"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Manufacturer"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Manufacturer"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
         <TextView
             android:id="@+id/tv12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="Manufacturer"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/no" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/medi"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -6,30 +6,60 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".OnePharmacy"
-    tools:showIn="@layout/activity_one_pharmacy">
+    tools:showIn="@layout/activity_one_pharmacy"
+    android:background="@drawable/bk2">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/no" />
         <TextView
             android:id="@+id/tv"
-            android:textSize="25sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"
             android:text="Hello"
-            android:layout_width="match_parent"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv2"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:text="Hello"
+            android:layout_width="270dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"/>
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="30dp"
+            android:src="@drawable/no" />
         <TextView
             android:id="@+id/tv3"
             android:textSize="25sp"
             android:text="Hello"
+            android:gravity="center_horizontal"
+            android:layout_width="270dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="30dp"
+            android:src="@drawable/no" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/doctor2"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
