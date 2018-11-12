@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.preference.Preference;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
@@ -24,6 +25,8 @@ import java.util.Calendar;
 public class NotificationFragment extends Fragment {
 
     SwitchCompat alertpm25,alertpsi,alertuvi;
+    String pm25_state = "hello";
+    boolean mPM25;
     boolean state_pm25,state_psi,state_uvi;
     //SharedPreferences preferences;
     public NotificationFragment() {
@@ -36,16 +39,27 @@ public class NotificationFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View RootView = inflater.inflate(R.layout.fragment_notification, container, false);
-        //final SharedPreferences preferences = getActivity().getSharedPreferences("PRES",0);
-        //state_pm25 = preferences.getBoolean("alertpm25",false);
-        //state_psi = preferences.getBoolean("alertpsi",false);
-        //state_uvi = preferences.getBoolean("alertuvi",false);
         alertpm25 = (SwitchCompat)RootView.findViewById(R.id.alertPM25);
-        //alertpm25.setChecked(false);
+        SharedPreferences sharedPrefs = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE);
+        Log.e("Check",Boolean.toString(sharedPrefs.getBoolean("NameOfThingToSave", false)));
+        alertpsi = (SwitchCompat)RootView.findViewById(R.id.alertPSI);
+        alertuvi = (SwitchCompat)RootView.findViewById(R.id.alertUVI);
+
+        alertpm25.setChecked(sharedPrefs.getBoolean("NameOfThingToSave", false));
+        alertpsi.setChecked(sharedPrefs.getBoolean("NameOfThingToSave1", false));
+        alertuvi.setChecked(sharedPrefs.getBoolean("NameOfThingToSave2", false));
+
         alertpm25.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
                 if (alertpm25.isChecked()) {
+
+                    SharedPreferences.Editor editor = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE).edit();
+                    editor.putBoolean("NameOfThingToSave", true);
+                    editor.putInt("Flag_pm25",1);
+                    editor.commit();
+
                     Log.e("Alert PM25","On");
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_pm25.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
@@ -55,26 +69,35 @@ public class NotificationFragment extends Fragment {
                     alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                             SystemClock.elapsedRealtime() + 1*60*1000,
                             1*60*1000, pendingIntent);
-
+                    pm25_state = "true";
                     Toast.makeText(getActivity(),"Alert PM2.5 has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
                 }
                 else {
+
+                    SharedPreferences.Editor editor = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE).edit();
+                    editor.putBoolean("NameOfThingToSave", false);
+                    editor.putInt("Flag_pm25",1);
+                    editor.commit();
+
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_pm25.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
                     );
                     AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(getActivity().getApplicationContext().ALARM_SERVICE);
                     alarmManager.cancel(pendingIntent);
+                    pm25_state = "false";
                     Toast.makeText(getActivity(),"Alert PM2.5 has been disabled",Toast.LENGTH_LONG).show();
                 }
             }
         });
 
-        alertpsi = (SwitchCompat)RootView.findViewById(R.id.alertPSI);
         alertpsi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (alertpsi.isChecked()) {
+                    SharedPreferences.Editor editor = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE).edit();
+                    editor.putBoolean("NameOfThingToSave1", true);
+                    editor.commit();
                     Log.e("Alert PSI","On");
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_psi.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
@@ -88,6 +111,9 @@ public class NotificationFragment extends Fragment {
                     Toast.makeText(getActivity(),"Alert PSI has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
                 }
                 else {
+                    SharedPreferences.Editor editor = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE).edit();
+                    editor.putBoolean("NameOfThingToSave1", false);
+                    editor.commit();
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_psi.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
@@ -99,11 +125,13 @@ public class NotificationFragment extends Fragment {
                 }
             }
         });
-        alertuvi = (SwitchCompat)RootView.findViewById(R.id.alertUVI);
         alertuvi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (alertuvi.isChecked()) {
+                    SharedPreferences.Editor editor = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE).edit();
+                    editor.putBoolean("NameOfThingToSave2", true);
+                    editor.commit();
                     Log.e("Alert UVI","On");
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_uvi.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
@@ -118,6 +146,9 @@ public class NotificationFragment extends Fragment {
                     Toast.makeText(getActivity(),"Alert UVI has been set. It will alert you every hour",Toast.LENGTH_LONG).show();
                 }
                 else {
+                    SharedPreferences.Editor editor = getActivity().getApplicationContext().getSharedPreferences("com.example.xyz", getActivity().getApplicationContext().MODE_PRIVATE).edit();
+                    editor.putBoolean("NameOfThingToSave2", false);
+                    editor.commit();
                     Intent intent = new Intent(getActivity().getApplicationContext(),Notification_reciever_uvi.class);
                     intent.setAction("MY_NOTIFICATION_MESSAGE");
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(getActivity().getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT
@@ -132,5 +163,6 @@ public class NotificationFragment extends Fragment {
 
         return RootView;
     }
+
 
 }
