@@ -142,6 +142,10 @@ public class CalendarFragment extends Fragment {
 
                    }
                }
+               else{
+                   Toast.makeText(getActivity(),"Please set both date and time",Toast.LENGTH_LONG).show();
+
+               }
             }
         });
 
