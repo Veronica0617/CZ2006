@@ -97,4 +97,6 @@
     <string name="clear_all_label">Clear all</string>
     <string name="Dialog_title">Diary Product</string>
     <string name="cereal_title">Cereal</string>
+    <string name="nav_healthier_caterers" />
+    <string name="nav_healthier_caterers2">Healther Caterers</string>
 </resources>
